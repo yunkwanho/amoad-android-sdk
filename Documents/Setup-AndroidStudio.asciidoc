@@ -27,6 +27,21 @@ dependencies {
 
 
 == AMoAd SDKの追加
+=== 自動設定
+build.gradleファイルにmavenリポジトリとamoad-sdkライブラリを追加する
+----
+allprojects {
+    repositories {
+        maven { url 'https://raw.github.com/amoad/amoad-android-sdk/master/maven-repo' }
+    }
+}
+dependencies {
+    ...
+    compile 'com.amoad:amoad-sdk:4.0.1'
+}
+----
+
+=== 手動設定
 Project Navigatorを開き、Modulesフォルダ以下のファイルをすべてコピーする +
 1.「Modules/AMoAd.jar」を「project/module/lib/」にコピーする +
 2.「Modules/images/」フォルダ以下の画像ファイルを「project/module/src/main/res/drawable-mdpi/」にコピーする
